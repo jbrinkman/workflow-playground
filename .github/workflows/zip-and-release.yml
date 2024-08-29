@@ -24,7 +24,7 @@ jobs:
 
       - name: Zip the repository
         run: |
-          zip -r null-connector_${{ env.BUILD_NUMBER }}.zip ${{ github.workspace }}/src/custom-connector
+          cd ${{ github.workspace }}/src/custom-connector/ && zip -r ${{ github.workspace }}/null-connector_${{ env.BUILD_NUMBER }}.zip ./*
 
       - name: Create a release
         id: create_release
