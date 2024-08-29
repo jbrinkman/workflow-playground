@@ -20,9 +20,11 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           dailybuild: true
 
+      - run: echo "Build number is ${{ env.BUILD_NUMBER }}"
+
       - name: Zip the repository
         run: |
-          zip -r null-connector_${{env.BUILD_NUMBER}}.zip ${{ github.workspace }}
+          zip -r null-connector_${{ env.BUILD_NUMBER }}.zip ${{ github.workspace }}
 
       - name: Create a release
         id: create_release
