@@ -1,0 +1,43 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Null Test",
+    "description": "This connector tests the behavior of null values in the response object.",
+    "version": "1.0"
+  },
+  "host": "joe.brinkman.me",
+  "basePath": "/",
+  "schemes": ["https"],
+  "consumes": [],
+  "produces": [],
+  "paths": {
+    "/": {
+      "get": {
+        "responses": {
+          "200": {
+            "description": "default",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "Data": {
+                  "type": "array",
+                  "items": {},
+                  "description": "Data"
+                }
+              }
+            }
+          }
+        },
+        "summary": "Null Test",
+        "description": "A simple query to test null behavior",
+        "operationId": "nulltest"
+      }
+    }
+  },
+  "definitions": {},
+  "parameters": {},
+  "responses": {},
+  "securityDefinitions": {},
+  "security": [],
+  "tags": []
+}
